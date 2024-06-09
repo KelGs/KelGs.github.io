@@ -1,0 +1,118 @@
+.content {
+    width: 80vw;
+    margin: 0 auto;
+
+    @media (max-width: 750px) {
+        width: 90vw;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 8vh 1fr 8vh;
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.title {
+  font-size: clamp(4.2rem, 6rem, 8vw);
+  color: $contrast-text;
+  max-width: max-content;
+  margin-bottom: 3rem;
+  span {
+    color: $contrast;
+  }
+}
+
+.paragraph {
+    color: $secundary;
+    font-size: clamp(1.6rem, 1.8rem, 3vw);
+    line-height: 1.6;
+    max-width: 50ch;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    color: $primary;
+    gap: 1rem;
+    font-weight: 400;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.svg {
+    fill: $secundary;
+    cursor: pointer;
+
+    &:hover {
+        fill: $primary;
+    }
+}
+
+
+.fade {
+  @include initAnimation(-100vh, 0, 0);
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #0f0f0f40;
+  backdrop-filter: blur( .5rem );
+  -webkit-backdrop-filter: blur( .5rem );
+  z-index: 1;
+}
+
+
+#fade-image-project {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: #0f0f0f40;
+  backdrop-filter: blur( .5rem );
+  -webkit-backdrop-filter: blur( .5rem );
+  .fade-image-content {
+    position: relative;
+    .modal-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: $contrast-text;
+      border: 2px solid $contrast-text;
+      border-radius: .5rem;
+      &:hover {
+        border-color: $contrast;
+        path {
+          color: $contrast;
+        }
+      }
+    }
+    
+    @media (max-width: 880px) {
+      img {
+        max-width: 99vw;
+      }
+      .modal-close {
+        width: 20px;
+        height: 20px;
+        stroke-width: 2;
+        border: 1px solid $contrast-text;
+      }
+    }
+  }
+  img {
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}

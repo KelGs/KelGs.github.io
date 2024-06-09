@@ -1,0 +1,64 @@
+#no-script {
+    display: grid;
+    position: fixed;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: $background;
+    color: $secundary;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+
+    section {
+        @include boxShadow(0.5rem, -0.5rem, 1rem);
+        padding: 6rem 3rem;
+        background-color: $background;
+        border-radius: 1rem;
+        animation: showModal 1s forwards;
+        div {
+            span {
+                display: block;
+                margin-bottom: 1rem;
+                color: $primary;
+            }
+        }
+    }
+
+    h2 {
+        color: $contrast-text;
+        margin-bottom: 2rem;
+    }
+
+    p, span {
+        font-size: clamp(1.5rem, 1.7rem, 3vw);
+        line-height: 1.5;
+        max-width: 50ch;
+        font-weight: 400;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    span {
+        color: $contrast-text;
+    }
+
+    @media (max-width: 800px) {
+            section {
+                padding: 2rem;
+            }
+            
+            h2 {
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                line-height: 1.4;
+                margin-bottom: 1rem;
+            }
+    }
+}

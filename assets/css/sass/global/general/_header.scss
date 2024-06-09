@@ -1,0 +1,161 @@
+.header {
+  @include flexItem(space-between, center, row, 2rem);
+  padding: 1rem 3vw;
+  color: $secundary;
+  &.active {
+    .social-content {
+      display: flex;
+      opacity: 1;
+      pointer-events: all;
+      animation: showContentBT 1s forwards;
+    }
+    .btn-social {
+      fill: $contrast;
+      animation: none;
+    }
+  }
+
+  
+  @media (max-width: 750px) {
+    padding: 1rem 5vw;
+    .btn-social {
+      display: none;
+    }
+    .btn-mobile {
+      display: flex;
+    }
+    .nav-list {
+      display: none;
+    }
+    
+    &.active {
+      .fade {
+        position: fixed;
+        pointer-events: all;
+        top: 0;
+        opacity: 1;
+      }
+
+      .social-content {
+        position: fixed;
+        left: 2vw;
+        right: auto;
+        top: 13vh;
+      }
+
+      .nav-list {
+        display: block;
+        ul {
+          @include flexItem(start, end, column, 3rem);
+          animation: showContentBT 1s forwards;
+          right: calc(5vw - 1rem);
+          position: fixed;
+          z-index: 2;
+          .nav-link {
+            padding: .5rem 1rem;
+            &::after {
+              top: 90%;
+            }
+          }
+        }
+      }
+
+      .btn-mobile {
+        position: fixed;
+        right: 5vw;
+        span {
+          background-color: transparent;
+          &::after, &::before {
+            top: 0;
+            opacity: 1;
+            background-color: $secundary;
+          }
+          &::after {
+            transform: rotate(225deg);
+          }
+          &::before {
+            transform: rotate(-225deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.brand {
+  color: $contrast-text;
+  font-weight: 700;
+  font-size: 3rem;
+  z-index: 2;
+}
+
+.nav-list ul {
+  @include flexItem(start, start, row, 1rem);
+  text-transform: uppercase;
+}
+
+.nav-link {
+  position: relative;
+  padding: .8rem 1.5rem;
+  border-radius: .5rem;
+  font-size: 1.7rem;
+
+  &:hover {
+    color: $contrast-text;
+    background-color: #1b1b1b;
+  }
+
+  &.active {
+    color: $contrast-text;
+
+    &::after {
+      @include pseudoClass(3rem, .2rem, 80%, 50%, $contrast);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.btn-social {
+  animation: socialBtn 10s alternate infinite;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.btn-mobile {
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  height: 3rem;
+  z-index: 2;
+  span {
+    position: relative;
+    display: block;
+    width: 2.5rem;
+    height: .3rem;
+    background-color: $secundary;
+
+    &::after {
+      @include pseudoClass(2.5rem, .3rem, .8rem, auto, $secundary);
+      transition: .5s ease-in-out;
+    }
+
+    &::before {
+      @include pseudoClass(2.5rem, .3rem, -.8rem, auto, $secundary);
+      transition: .5s ease-in-out;
+    }
+  }
+}
+
+.social-content {
+  @include boxShadow(.6rem, -.6rem, 1.2rem);
+  @include flexItem(center, center, column, 3rem);
+  right: calc(3vw - 1rem);
+  background-color: $background;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  border-radius: 2rem;
+  padding: 3rem 1rem;
+  opacity: 0;
+  z-index: 2;
+}
