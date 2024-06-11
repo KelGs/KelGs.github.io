@@ -41,7 +41,7 @@
     padding: 2rem;
     border-radius: 1rem;
     color: $secundary;
-    @include boxShadow(6px, -6px, 18px);
+    @include boxShadow(3px, -3px, 7px);
     height: max-content;
   
     @media (max-width: 1000px) {

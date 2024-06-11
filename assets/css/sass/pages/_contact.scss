@@ -16,7 +16,7 @@
     overflow: hidden;
     margin-bottom: 2rem;
     border-radius: 1rem;
-    @include boxShadow(5px, -5px, 15px);
+    @include boxShadow(3px, -3px, 7px);
     @media (max-width: 400px) {
       padding: 1rem 3rem;
     }
@@ -64,7 +64,7 @@
   
     &:hover {
       transition: .2s all ease-in-out;
-      @include insetBoxShadow(6px, -6px, 15px);
+      @include insetBoxShadow(4px, -4px, 8px);
       border-color: transparent;
       .contact_svg {
         transform: scale(.9);

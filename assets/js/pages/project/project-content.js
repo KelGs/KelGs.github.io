@@ -13,7 +13,7 @@ export default class LoadProjectContent {
                     el.title,
                     el.description,
                     el.image,
-                    el.alt,
+                    el.title,
                     el.dataAnime,
                     el.initialDate,
                     el.iconsSvg.image

@@ -22,14 +22,14 @@
 
 // Mixin para Sombra
 @mixin boxShadow($positive: 0, $negative: 0, $blur: 0) {
-    box-shadow: $positive $positive $blur #020202,
+    box-shadow: $positive $positive $blur #070707,
                 $negative $negative $blur #1b1b1b;
 }
 
 // Mixin para Sombra Inset
 @mixin insetBoxShadow($positive: 0, $negative: 0, $blur: 0) {
-    box-shadow: inset $positive $positive $blur #020202,
-                inset $negative $negative $blur #1b1b1b;
+    box-shadow: inset $positive $positive $blur #050505,
+                inset $negative $negative $blur #202020;
 }
 
 // Mixin para Animação Inicial

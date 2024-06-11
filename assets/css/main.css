@@ -629,7 +629,7 @@ ul {
 }
 
 .social-content {
-  box-shadow: 0.6rem 0.6rem 1.2rem #020202, -0.6rem -0.6rem 1.2rem #1b1b1b;
+  box-shadow: 3px 3px 7px #070707, -3px -3px 7px #1b1b1b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -677,7 +677,7 @@ ul {
   -webkit-backdrop-filter: blur(1rem);
 }
 #no-script section {
-  box-shadow: 0.5rem 0.5rem 1rem #020202, -0.5rem -0.5rem 1rem #1b1b1b;
+  box-shadow: 0.5rem 0.5rem 1rem #070707, -0.5rem -0.5rem 1rem #1b1b1b;
   padding: 6rem 3rem;
   background-color: #111111;
   border-radius: 1rem;
@@ -825,7 +825,7 @@ ul {
 }
 
 .btn-cv {
-  box-shadow: 3px 3px 9px #020202, -3px -3px 9px #1b1b1b;
+  box-shadow: 3px 3px 7px #070707, -3px -3px 7px #1b1b1b;
   color: #ececec;
   border-radius: 0.5rem;
   padding: 1rem 2rem;
@@ -843,15 +843,15 @@ ul {
   animation: upDown 2s 0.8s infinite;
 }
 .btn-cv:hover {
-  box-shadow: inset 3px 3px 6px #020202, inset -3px -3px 6px #1b1b1b;
+  box-shadow: inset 3px 3px 6px #050505, inset -3px -3px 6px #202020;
   transition: 0.2s all ease-in-out;
   text-decoration: none;
   font-size: 1.5rem;
   border-color: transparent;
-  color: #616161;
+  color: #3d3d3d;
 }
 .btn-cv:hover .svg {
-  fill: #616161;
+  fill: #3d3d3d;
   animation: none;
 }
 
@@ -865,7 +865,7 @@ ul {
      object-fit: cover;
   border-radius: 1rem;
   margin: 0 auto 3rem auto;
-  box-shadow: 3px 3px 10px #020202, -3px -3px 10px #1b1b1b;
+  box-shadow: 3px 3px 10px #070707, -3px -3px 10px #1b1b1b;
 }
 .about-aside .img-aside:hover {
   cursor: zoom-in;
@@ -982,7 +982,7 @@ ul {
   flex: 1 0 28rem;
   height: 25rem;
   border-radius: 1rem;
-  box-shadow: 3px 3px 12px #020202, -3px -3px 12px #1b1b1b;
+  box-shadow: 3px 3px 12px #070707, -3px -3px 12px #1b1b1b;
 }
 .about-courses .about-course-item p {
   text-transform: uppercase;
@@ -1100,7 +1100,7 @@ ul {
   grid-template-columns: repeat(3, max-content);
   padding: clamp(3rem, 5vw, 5rem) clamp(2rem, 5vw, 4rem);
   gap: clamp(0.5rem, 2vw, 3rem);
-  box-shadow: 3px 3px 10px #020202, -3px -3px 10px #1b1b1b;
+  box-shadow: 3px 3px 7px #070707, -3px -3px 7px #1b1b1b;
   border-radius: 1rem;
 }
 
@@ -1116,12 +1116,12 @@ ul {
   cursor: pointer;
 }
 .skill-svg.active {
-  box-shadow: inset 2px 2px 8px #020202, inset -2px -2px 8px #1b1b1b;
+  box-shadow: inset 3px 3px 7px #050505, inset -3px -3px 7px #202020;
   border-color: transparent;
 }
 .skill-svg.active .svg-skill {
   transform: scale(0.9);
-  color: #616161;
+  color: #3d3d3d;
 }
 
 .svg-skill {
@@ -1229,7 +1229,7 @@ ul {
   padding: 2rem;
   border-radius: 1rem;
   color: #8b8b92;
-  box-shadow: 6px 6px 18px #020202, -6px -6px 18px #1b1b1b;
+  box-shadow: 3px 3px 7px #070707, -3px -3px 7px #1b1b1b;
   height: -moz-max-content;
   height: max-content;
 }
@@ -1378,7 +1378,7 @@ ul {
   overflow: hidden;
   margin-bottom: 2rem;
   border-radius: 1rem;
-  box-shadow: 5px 5px 15px #020202, -5px -5px 15px #1b1b1b;
+  box-shadow: 3px 3px 7px #070707, -3px -3px 7px #1b1b1b;
 }
 @media (max-width: 400px) {
   .contact_content {
@@ -1426,15 +1426,15 @@ ul {
 }
 .contact:hover {
   transition: 0.2s all ease-in-out;
-  box-shadow: inset 6px 6px 15px #020202, inset -6px -6px 15px #1b1b1b;
+  box-shadow: inset 4px 4px 8px #050505, inset -4px -4px 8px #202020;
   border-color: transparent;
 }
 .contact:hover .contact_svg {
   transform: scale(0.9);
 }
 .contact:hover path, .contact:hover h2, .contact:hover p {
-  color: #616161;
-  fill: #616161;
+  color: #3d3d3d;
+  fill: #3d3d3d;
 }
 .contact:hover h2 {
   font-size: 2.7rem;
@@ -1455,7 +1455,7 @@ ul {
   z-index: 10;
   color: #ececec;
   background-color: #111111;
-  box-shadow: 5px 5px 8px #020202, -5px -5px 8px #1b1b1b;
+  box-shadow: 5px 5px 8px #070707, -5px -5px 8px #1b1b1b;
   animation: showModalEmail 3s forwards;
 }
 #assinc-email span {

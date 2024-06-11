@@ -8,4 +8,6 @@ import initializePageScripts from './global/init/initialize-page-scripts.js';
 initializePageScripts();
 
 import { initializeDelayedComponents } from './global/init/initialize-delayed-components.js';
-initializeDelayedComponents();
+setTimeout(() => {
+  initializeDelayedComponents();
+}, 100);

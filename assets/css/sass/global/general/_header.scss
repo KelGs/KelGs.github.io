@@ -147,7 +147,7 @@
 }
 
 .social-content {
-  @include boxShadow(.6rem, -.6rem, 1.2rem);
+  @include boxShadow(3px, -3px, 7px);
   @include flexItem(center, center, column, 3rem);
   right: calc(3vw - 1rem);
   background-color: $background;

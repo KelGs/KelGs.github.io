@@ -9,5 +9,5 @@ export const initializeDelayedComponents = () => {
   
       const activateNavigationLinks = new ActivateNavigationLinks('.header', '.nav-link');
       activateNavigationLinks.init();
-    }, 200);
+    }, 100);
   };

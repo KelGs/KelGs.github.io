@@ -3,7 +3,6 @@ const infoProject = [
       title: 'Sorveteria ICCream',
       description: 'O projeto ICCream é uma sorveteria inovadora em desenvolvimento, que visa proporcionar uma experiência única e personalizada aos seus clientes. Com foco na qualidade dos produtos, oferecemos uma ampla variedade de sabores artesanais, incluindo opções veganas e sem lactose, feitos com ingredientes frescos e naturais.',
       image: 'assets/src/images/project/BG-Initial-ICCream.jpg',
-      alt: "Imagem do meu portfólio",
       linkDeploy: 'https://github.com/KelGs/Agenda-de-Contatos',
       linkRepository: 'https://github.com/KelGs?tab=repositories',
       dataAnime: 'right',
@@ -22,7 +21,6 @@ const infoProjectApresentation = [
       title: 'Em desenvolvimento - Sorveteria ICCream',
       description: 'O projeto ICCream é uma sorveteria inovadora em desenvolvimento, que visa proporcionar uma experiência única e personalizada aos seus clientes. Com foco na qualidade dos produtos, oferecendo uma ampla variedade de sabores artesanais, incluindo opções veganas e sem lactose, feitos com ingredientes frescos e naturais.',
       image: 'assets/src/images/project/BG-Initial-ICCream.jpg',
-      alt: "Imagem do meu portfólio",
       dataAnime: 'right',
       initialDate: 'Julho de 2024 - Em desenvolvimento',
       iconsSvg: {
