@@ -99,6 +99,12 @@
   padding: .8rem 1.5rem;
   border-radius: .5rem;
   font-size: 1.7rem;
+  &::after {
+    transition: .2s ease-in;
+    width: 0;
+    transform: translateX(0%);
+    background-color: red;
+  }
 
   &:hover {
     color: $contrast-text;
@@ -107,8 +113,8 @@
 
   &.active {
     color: $contrast-text;
-
     &::after {
+      animation: showUnderscore .5s;
       @include pseudoClass(3rem, .2rem, 80%, 50%, $contrast);
       transform: translateX(-50%);
     }

@@ -286,3 +286,12 @@
         display: none;
     }
 }
+
+@keyframes showUnderscore {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 3rem;
+    }
+  }

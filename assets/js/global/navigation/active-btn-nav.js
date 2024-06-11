@@ -3,6 +3,7 @@ export default class ActivateButtonNavigation {
     this.headerMenu = document.querySelector(header);
     this.btnMobile = document.querySelector(mobile);
     this.btnSocial = document.querySelector(social);
+    this.navSocial = document.querySelectorAll('.social-link');
   }
 
   handleButtonClick = () => {
@@ -33,6 +34,13 @@ export default class ActivateButtonNavigation {
     if (this.btnSocial) {
       this.btnSocial.addEventListener('click', this.handleButtonClick);
       this.btnSocial.addEventListener('keyup', this.handleButtonKeyPress);
+    }
+    
+    if (this.navSocial.length) {
+      this.navSocial.forEach((link) => {
+        link.addEventListener('click', this.handleButtonClick);
+        link.addEventListener('keyup', this.handleButtonKeyPress);
+      })
     }
   }
 }

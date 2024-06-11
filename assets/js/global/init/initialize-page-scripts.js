@@ -1,7 +1,6 @@
 import HandleTabNavigation from "../../pages/skill/handle-tab-nav.js";
 import AnimateData from "../animation/animation.js";
 import ToggleModal from "../../pages/index/toggle-modal.js";
-import ActivateNavigationLinks from "../navigation/active-link-nav.js";
 import LoadProjectContent from '../../pages/project/project-content.js';
 import CalculateAboutYear from "../../pages/about/age-count.js";
 import CopyEmail from "../../pages/contact/copy-email.js";
@@ -54,14 +53,9 @@ const pageScripts = {
 
 const initializePageScripts = () => {
     const pathName = window.location.pathname;
-
     const script = pageScripts[pathName];
-    if (script) {
-        script();
-    }
-
-    const activateNavigationLinks = new ActivateNavigationLinks('.header', '.nav-link');
-    activateNavigationLinks.init();
+    
+    if (script) script();
 
     const animeData = new AnimateData('.hidden');
     animeData.init();

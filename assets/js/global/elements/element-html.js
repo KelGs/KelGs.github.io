@@ -54,7 +54,7 @@ export const LiProject = (title, description, image, linkDeploy, linkRepository,
             </picture>
 
             <nav class="project-nav">
-              <a class="project-btn" href="${linkDeploy}" target="_blank"> 
+              <a class="project-btn" href="${linkDeploy}" target="_blank" rel="noopener noreferer"> 
                 <p>Deploy</p>         
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
                 <path d="M15 3h6v6"/>
@@ -63,7 +63,7 @@ export const LiProject = (title, description, image, linkDeploy, linkRepository,
                 </svg> 
               </a>
 
-              <a class="project-btn" href="${linkRepository}" target="_blank"> 
+              <a class="project-btn" href="${linkRepository}" target="_blank" rel="noopener noreferer"> 
                 <p>Repositório</p>         
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
                   <path d="M5 12h14"/>
@@ -130,7 +130,7 @@ export const FacultyContent = (date, href, faculty, university) => {
   return `
   <li class="about-college-item">
       <span class="hidden" data-anime="right">${date}</span>
-      <a class="hidden" data-anime="right" href="${href}" target="_blank">
+      <a class="hidden" data-anime="right" href="${href}" target="_blank" rel="noopener noreferer">
       ${faculty}
       <img src="./assets/src/svg/external-link.svg" alt="Icon link">
       </a>
