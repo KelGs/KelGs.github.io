@@ -55,10 +55,6 @@
     transition-delay: .2s;
 }
 
-.title-alert {
-    transition-delay: .7s;
-}
-
 .main-link {
     transition-delay: .4s;
 }
@@ -226,10 +222,10 @@
 
 @keyframes showContentBT {
     from {
-        top: 25vh;
+        top: 20vh;
     }
     to {
-        top: 14vh;
+        top: 10vh;
     }
 }
 

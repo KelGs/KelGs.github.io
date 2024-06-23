@@ -4,7 +4,7 @@
   color: $secundary;
   &.active {
     .social-content {
-      display: flex;
+      @include flexItem(center, center, column, 3rem);
       opacity: 1;
       pointer-events: all;
       animation: showContentBT 1s forwards;
@@ -154,7 +154,6 @@
 
 .social-content {
   @include boxShadow(3px, -3px, 7px);
-  @include flexItem(center, center, column, 3rem);
   right: calc(3vw - 1rem);
   background-color: $background;
   pointer-events: none;

@@ -1,6 +1,5 @@
 export const ModalElement = () => {
-    const modalElement = 
-    `
+  const modalElement = `
     <div id="modal">
     <section id="modal-content">
       <header class="modal-content-header">
@@ -22,20 +21,28 @@ export const ModalElement = () => {
       </div>
     </section>
   </div>
-    `
-    return modalElement;
-}
+    `;
+  return modalElement;
+};
 
 export const LiContent = (title, content) => {
-    return `            
+  return `            
     <li class="skill-text">
         <strong>${title}</strong>
         <p class=" skill-text">${content}</p>
-    </li>`
-}
+    </li>`;
+};
 
-export const LiProject = (title, description, image, linkDeploy, linkRepository, dataAnime, iconsSvg) => {
-    return `
+export const LiProject = (
+  title,
+  description,
+  image,
+  linkDeploy,
+  linkRepository,
+  dataAnime,
+  iconsSvg,
+) => {
+  return `
     <li class="project hidden" data-anime="${dataAnime}">
       <section class="project-main">
         <picture class="project-image">
@@ -75,10 +82,18 @@ export const LiProject = (title, description, image, linkDeploy, linkRepository,
         </aside>
       </section>
     </li>
-  `
-}
+  `;
+};
 
-export const LiProjectPresentation = (title, description, image, alt, dataAnime, initialDate, iconsSvg) => {
+export const LiProjectPresentation = (
+  title,
+  description,
+  image,
+  alt,
+  dataAnime,
+  initialDate,
+  iconsSvg,
+) => {
   return `
   <li class="project project-presentation hidden" data-anime="${dataAnime}">
     <section class="project-main">
@@ -99,8 +114,8 @@ export const LiProjectPresentation = (title, description, image, alt, dataAnime,
       </aside>
     </section>
   </li>
-`
-}
+`;
+};
 
 export const showModalEmail = () => {
   return `
@@ -112,8 +127,8 @@ export const showModalEmail = () => {
     </span>
     <span>Você está sendo redirecionado ao e-mail.</span>
   </div>
-  `
-}
+  `;
+};
 
 export const imageFullContent = (href) => {
   return `
@@ -123,8 +138,8 @@ export const imageFullContent = (href) => {
       <img src="${href}" alt="">
     </div>
   </div>
-`
-}
+`;
+};
 
 export const FacultyContent = (date, href, faculty, university) => {
   return `
@@ -132,9 +147,9 @@ export const FacultyContent = (date, href, faculty, university) => {
       <span class="hidden" data-anime="right">${date}</span>
       <a class="hidden" data-anime="right" href="${href}" target="_blank" rel="noopener noreferer">
       ${faculty}
-      <img src="./assets/src/svg/external-link.svg" alt="Icon link">
+      <img src="./src/assets/svg/external-link.svg" alt="Icon link">
       </a>
       <p class="hidden" data-anime="right">${university}</p>
   </li>
-`
-}
+`;
+};

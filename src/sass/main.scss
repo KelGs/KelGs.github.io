@@ -1,0 +1,16 @@
+@import 'global/variables/variables';
+@import 'global/variables/mixin';
+
+@import 'global/reset/reset';
+@import 'global/reset/global';
+
+@import 'global/animation/animation';
+@import 'global/general/header';
+@import 'global/general/footer';
+@import 'global/no-script/no-script';
+
+@import 'pages/index';
+@import 'pages/about';
+@import 'pages/skill';
+@import 'pages/project';
+@import 'pages/contact';

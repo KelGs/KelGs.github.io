@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Desenvolvedor Front End especializado em criar experiências web interativas e responsivas. Confira meus projetos de design inovador e código eficiente em HTML, CSS e JavaScript.">
-  <link rel="shortcut icon" href="assets/src/svg/favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="src/assets/svg/favicon/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./src/css/main.css">
   <title>Portfólio | Kelvyn Gonçalves - Sobre mim</title>
 </head>
 
@@ -17,86 +17,85 @@
   <div class="container">
     <header class="header"></header>
 
-    <div class="content">
-      <div id="about">
-        <section class="about-content">
-          <main>
-            <h1 class="title hidden" data-anime="right">sobre<span>.</span></h1>
-            <div class="about-paragraphs">
-              <p class="paragraph hidden " data-anime="left">
-                Olá, meu nome é Kelvyn Gonçalves, tenho <span id="year"></span> anos de idade e sou desenvolvedor web front-end. Sou formado em Gestão da Tecnologia da Informação e possuo Pós-Graduação em Desenvolvimento Web Front-end.
-              </p>
-              <p class="paragraph hidden" data-anime="left">
-                Meu interesse pela programação começou no final do terceiro semestre da minha graduação, quando desenvolvi um aplicativo em C++ para uma loja de PetShop. Essa experiência despertou meu entusiasmo pela programação, levando-me a focar meus estudos no desenvolvimento front-end.
-              </p>
-              <p class="paragraph hidden" data-anime="left">Em meus projetos, utilizo <span>HTML5</span>, <span>CSS3 (com Sass)</span> e <span>Javascript</span>, aplicando também conceitos de <span>UI/UX Design</span> para criar e desenvolver interfaces intuitivas e agradáveis. Atualmente, estou expandindo meus conhecimentos em <span>React</span> e <span>TypeScript</span>.
-              </p>
-            </div>
+    <main class="content">
+      <section id="about">
+        <article class="about-content">
+          <h1 class="title hidden" data-anime="right">
+            sobre<span>.</span>
+          </h1>
 
-            <a href="/assets/src/pdf/Kelvyn Gonçalves de Souza.pdf" class="btn-cv link hidden" download data-anime="right">
-              Baixar CV
-              <svg width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="svg">
-                <path d="M224,152v56a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V152a8,8,0,0,1,16,0v56H208V152a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,132.69V40a8,8,0,0,0-16,0v92.69L93.66,106.34a8,8,0,0,0-11.32,11.32Z"></path>
-              </svg>
+          <div class="about-paragraphs">
+            <p class="paragraph hidden " data-anime="left">
+              Olá, meu nome é Kelvyn Gonçalves, tenho <span id="year"></span> anos de idade e sou desenvolvedor web front-end. Sou formado em Gestão da Tecnologia da Informação e possuo Pós-Graduação em Desenvolvimento Web Front-end.
+            </p>
+            <p class="paragraph hidden" data-anime="left">
+              Meu interesse pela programação começou no final do terceiro semestre da minha graduação, quando desenvolvi um aplicativo em C++ para uma loja de PetShop. Essa experiência despertou meu entusiasmo pela programação, levando-me a focar meus estudos no desenvolvimento front-end.
+            </p>
+            <p class="paragraph hidden" data-anime="left">
+              Em meus projetos, utilizo <span>HTML5</span>, <span>CSS3 (com Sass)</span> e <span>Javascript</span>, aplicando também conceitos de <span>UI/UX Design</span> para criar e desenvolver interfaces intuitivas e agradáveis. Atualmente, estou expandindo meus conhecimentos em <span>React</span> e <span>TypeScript</span>.
+            </p>
+          </div>
+
+          <a href="/src/assets/pdf/Kelvyn Gonçalves de Souza.pdf" class="btn-cv link hidden" data-anime="right" aria-label="Baixar currículo de Kelvyn Gonçalves" download>
+            Baixar CV
+            <svg viewBox="0 0 256 256" fill="currentColor" width="22" height="22" class="svg">
+              <path d="M224,152v56a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V152a8,8,0,0,1,16,0v56H208V152a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,132.69V40a8,8,0,0,0-16,0v92.69L93.66,106.34a8,8,0,0,0-11.32,11.32Z"></path>
+            </svg>
+          </a>
+        </article>
+
+        <aside class="about-aside">
+          <img src="/src/assets/images/me.webp" class="hidden img-aside" alt="Rosto do Kelvyn Gonçalves" data-anime="right" width="400" height="540">
+          <a class="link link-aside hidden" data-anime="left" href="https://maps.app.goo.gl/mASeMHDfzW7StaUb7" target="_blank" rel="noopener noreferer" aria-label="Localização: Planaltina de Goiás, Brasil">
+            Planaltina de Goiás, Brasil
+            <img src="./src/assets/svg/location.svg" width="20" height="20" alt="Icon link">
+          </a>
+        </aside>
+        <img src="./src/assets/svg/arrow-down.svg" width="32" height="32" class="about-arrow" alt="Icon link">
+      </section>
+
+      <section class="about-trainer">
+        <article id="about-college">
+          <div class="about-college-bar"></div>
+          <ul class="about-college-list"></ul>
+        </article>
+
+        <article class="about-courses">
+          <div>
+            <a href="https://www.origamid.com/certificate/86fd4d71" target="_blank" rel="noopener noreferer" tabindex="0" class="about-course-item hidden" data-anime="bottom-left" aria-label="Certificado Origamid JavaScript ES6, 74 horas">
+              <header class="about-course-header">
+                <p>Curso</p>
+                <span class="about-course-hours">74h</span>
+              </header>
+              <footer class="about-course-footer">
+                <p>Origamid</p>
+                <span>JavaScript ES6</span>
+              </footer>
             </a>
-          </main>
-
-          <aside class="about-aside">
-            <img src="/assets/src/images/me.webp" class="hidden img-aside" alt="Rosto do Kelvyn Gonçalves" data-anime="right" width="400" height="540">
-
-            <a class="link link-aside hidden" data-anime="left" href="https://maps.app.goo.gl/mASeMHDfzW7StaUb7" target="_blank" rel="noopener noreferer">
-              Planaltina de Goiás, Brasil
-              <img src="./assets/src/svg/location.svg" alt="Icon link">
+            <a href="https://drive.google.com/file/d/1AZO-ln5nf4z1vuo0qxJq18kJJPHzIytO/view?usp=drive_link" target="_blank" rel="noopener noreferer" tabindex="0" class="about-course-item hidden" data-anime="bottom" aria-label="Certificado OneBitCode JavaScript, 10 horas">
+              <header class="about-course-header">
+                <p>Curso</p>
+                <span class="about-course-hours">10h</span>
+              </header>
+              <footer class="about-course-footer">
+                <p>OneBitCode</p>
+                <span>JavaScript</span>
+              </footer>
             </a>
-          </aside>
-          <img src="./assets/src/svg/arrow-down.svg" class="about-arrow" alt="Icon link">
-        </section>
-
-        <section class="about-trainer">
-          <section id="about-college">
-            <div class="about-college-bar"></div>
-            <ul class="about-college-list"></ul>
-          </section>
-
-          <section class="about-courses">
-            <div>
-              <a href="https://www.origamid.com/certificate/86fd4d71" target="_blank" rel="noopener noreferer" tabindex="0" class="about-course-item hidden" data-anime="bottom-left">
-                <header class="about-course-header">
-                  <p>Curso</p>
-                  <span class="about-course-hours">74h</span>
-                </header>
-                <footer class="about-course-footer">
-                  <p>Origamid</p>
-                  <span>JavaScript ES6</span>
-                </footer>
-              </a>
-
-              <a href="https://drive.google.com/file/d/1AZO-ln5nf4z1vuo0qxJq18kJJPHzIytO/view?usp=drive_link" target="_blank" rel="noopener noreferer" tabindex="0" class="about-course-item hidden" data-anime="bottom">
-                <header class="about-course-header">
-                  <p>Curso</p>
-                  <span class="about-course-hours">10h</span>
-                </header>
-                <footer class="about-course-footer">
-                  <p>OneBitCode</p>
-                  <span>JavaScript</span>
-                </footer>
-              </a>
-
-              <div class="about-course-item hidden" data-anime="bottom-right">
-                <header class="about-course-header">
-                  <p>Curso</p>
-                  <span class="about-course-hours">Em andamento</span>
-                </header>
-                <footer class="about-course-footer">
-                  <p>EBAC</p>
-                  <span>Eng. Front-end</span>
-                </footer>
-              </div>
+            <div class="about-course-item hidden" data-anime="bottom-right" aria-label="Curso em andamento, EBAC, Engenharia Front-end">
+              <header class="about-course-header">
+                <p>Curso</p>
+                <span class="about-course-hours">Em andamento</span>
+              </header>
+              <footer class="about-course-footer">
+                <p>EBAC</p>
+                <span>Eng. Front-end</span>
+              </footer>
             </div>
-          </section>
-        </section>
-      </div>
-    </div>
+          </div>
+        </article>
+      </section>
+    </main>
 
     <footer class="footer"></footer>
   </div>
@@ -105,11 +104,11 @@
     <section>
       <h2>Olá usuário,</h2>
       <p>Para uma melhor experiência em meu portfólio, por favor, <span>ative o JavaScript em seu navegador</span>. O JavaScript é essencial para o funcionamento adequado das funcionalidades dinâmicas e interativas desse portfólio.</p>
-      <div>
+      <article>
         <p>Agradeço sua compreensão e cooperação.</p>
         <span>Kelvyn Gonçalves de Souza</span>
         <span>Desenvolvedor Frontend</span>
-      </div>
+      </article>
     </section>
   </noscript>
 

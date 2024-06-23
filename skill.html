@@ -5,48 +5,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Desenvolvedor Front End especializado em criar experiências web interativas e responsivas. Confira meus projetos de design inovador e código eficiente em HTML, CSS e JavaScript.">
-  <link rel="shortcut icon" href="assets/src/svg/favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="src/assets/svg/favicon/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./src/css/main.css">
   <title>Portfólio | Kelvyn Gonçalves - Linguagens</title>
 </head>
 
 <body>
   <div class="container">
-    <header class="header">
-    </header>
+    <header class="header"></header>
 
-    <noscript id="no-script">
-      <section>
-        <h2>Olá usuário,</h2>
-        <p>Para uma melhor experiência em meu portfólio, por favor, <span>ative o JavaScript em seu navegador</span>. O JavaScript é essencial para o funcionamento adequado das funcionalidades dinâmicas e interativas desse portfólio.</p>
+    <main class="content">
+      <section id="skill" class="skill-content">
+        <div class="skill-content-text">
+          <h1 class="title hidden" data-anime="left">
+            habilidades<span>.</span>
+          </h1>
+          <ul class="skill-list hidden"></ul>
+        </div>
+
         <div>
-          <p>Agradeço sua compreensão e cooperação.</p>
-          <span>Kelvyn Gonçalves de Souza</span>
-          <span>Desenvolvedor Frontend</span>
+          <ul class="svg-list hidden"></ul>
         </div>
       </section>
-    </noscript>
+    </main>
 
-    <div class="content">
-      <main id="skill" class="skill-content">
-        <section class="skill-content-text">
-          <h1 class="title hidden" data-anime="left">habilidades<span>.</span></h1>
-          <ul class="skill-list hidden">
-
-          </ul>
-        </section>
-        <section>
-          <ul class="svg-list hidden"></ul>
-        </section>
-      </main>
-    </div>
-
-    <footer class="footer">
-    </footer>
+    <footer class="footer"></footer>
   </div>
+
+
+  <noscript id="no-script">
+    <section>
+      <h2>Olá usuário,</h2>
+      <p>Para uma melhor experiência em meu portfólio, por favor, <span>ative o JavaScript em seu navegador</span>. O JavaScript é essencial para o funcionamento adequado das funcionalidades dinâmicas e interativas desse portfólio.</p>
+      <article>
+        <p>Agradeço sua compreensão e cooperação.</p>
+        <span>Kelvyn Gonçalves de Souza</span>
+        <span>Desenvolvedor Frontend</span>
+      </article>
+    </section>
+  </noscript>
 
   <script src="./main.js" type="module"></script>
 
