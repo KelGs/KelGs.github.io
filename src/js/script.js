@@ -7,6 +7,7 @@ function initializeComponentsAsync() {
     return new Promise((resolve, reject) => {
         try {
             initializeComponents();
+            initializeNavigation();
             resolve();
         } catch (error) {
             reject(new Error(error));
@@ -17,10 +18,9 @@ function initializeComponentsAsync() {
 async function resolveInitialization() {
     try {
         await initializeComponentsAsync();
-        initializeNavigation();
         initializePageScripts();
 
-        setTimeout(() => initializeDelayedEvents(), 400);
+        setTimeout(() => initializeDelayedEvents(), 600);
     } catch (error) {
         console.error('Erro durante a inicialização:', error);
     }
