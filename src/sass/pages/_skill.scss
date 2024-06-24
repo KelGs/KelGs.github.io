@@ -132,8 +132,11 @@
         .btn-show {
           display: none;
         }
-        .btn-hide, .show-hide {
-          display: inline-block;
+        .show-hide {
+          display: block;
+        }
+        .btn-hide {
+          display: inline;
         }
       }
     }

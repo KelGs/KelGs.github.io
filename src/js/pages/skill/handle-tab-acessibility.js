@@ -6,9 +6,11 @@ export default class ShowHiddenText {
 
     toggleUlContent(ev) {
         const element = ev.target;
-
-        if (element.classList.contains('btn-show') || element.classList.contains('btn-hide')) {
-            this.ulContent.classList.toggle('active');
+        
+        if(element.classList.contains('btn-show')){
+            this.ulContent.classList.add('active');
+        } else if(element.classList.contains('btn-hide')) {
+            this.ulContent.classList.remove('active');
         }
     }
 
