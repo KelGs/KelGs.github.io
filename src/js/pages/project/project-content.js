@@ -1,4 +1,4 @@
-import { LiProjectPresentation } from '../../global/elements/element-html.js';
+import { LiProjectPresentation } from '../../global/content/element-html.js';
 import { infoProjectApresentation } from './info-project.js';
 
 export default class LoadProjectContent {

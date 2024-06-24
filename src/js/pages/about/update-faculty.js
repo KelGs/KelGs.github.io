@@ -1,4 +1,4 @@
-import { FacultyContent } from "../../global/elements/element-html.js";
+import { FacultyContent } from "../../global/content/element-html.js";
 import { infoFaculty } from "./info-faculty.js";
 
 

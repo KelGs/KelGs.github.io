@@ -1,4 +1,4 @@
-import { ModalElement } from "../../global/elements/element-html.js";
+import { ModalElement } from "../../global/content/element-html.js";
 
 export default class ToggleModal {
     constructor(modalSelector) {

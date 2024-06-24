@@ -1,4 +1,4 @@
-import { LiContent } from "../../global/elements/element-html.js";
+import { LiContent } from "../../global/content/element-html.js";
 import skillContent from "./skill-content.js";
 
 export default class HandleTabNavigation {

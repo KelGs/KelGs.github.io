@@ -1,4 +1,4 @@
-import { showModalEmail } from "../../global/elements/element-html.js";
+import { showModalEmail } from "../../global/content/element-html.js";
 
 
 export default class CopyEmail {

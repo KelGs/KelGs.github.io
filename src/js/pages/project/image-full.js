@@ -1,4 +1,4 @@
-import { imageFullContent } from "../../global/elements/element-html.js";
+import { imageFullContent } from "../../global/content/element-html.js";
 
 export default class ImageFull {
   constructor(img, content) {
