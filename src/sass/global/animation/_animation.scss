@@ -1,47 +1,47 @@
 .hidden {
     opacity: 0;
     filter: blur(.5rem);
-    transition: 1.5s ease;
+    transition: 1.5s ease-in-out;
     transition-property: transform, opacity, filter;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transition: 1.5s ease;
+    transition: 1.5s ease-in-out;
     transition-property: transform, opacity, filter;
 }
 
 [data-anime="top"] {
-    transform: translate3d(0, -15rem, 0);
+    transform: translate3d(0, -10rem, 0);
 }
 
 [data-anime="top-left"] {
-    transform: translate3d(-15rem, -15rem, 0);
+    transform: translate3d(-10rem, -10rem, 0);
 }
 
 [data-anime="top-right"] {
-    transform: translate3d(15rem, -15rem, 0);
+    transform: translate3d(10rem, -10rem, 0);
 }
 
 [data-anime="left"] {
-    transform: translate3d(-15rem, 0, 0);
+    transform: translate3d(-10rem, 0, 0);
 }
 
 [data-anime="right"] {
-    transform: translate3d(15rem, 0, 0);
+    transform: translate3d(10rem, 0, 0);
 }
 
 [data-anime="bottom"] {
-    transform: translate3d(0, 15rem, 0);
+    transform: translate3d(0, 10rem, 0);
 }
 
 [data-anime="bottom-left"] {
-    transform: translate3d(-15rem, 15rem, 0);
+    transform: translate3d(-10rem, 10rem, 0);
 }
 
 [data-anime="bottom-right"] {
-    transform: translate3d(15rem, 15rem, 0);
+    transform: translate3d(10rem, 10rem, 0);
 }
 
 .show[data-anime] {
@@ -62,21 +62,18 @@
 /* ABOUT */
 
 /* PARAGRAPHS */
-.about-paragraphs :nth-child(1) {
-    transition-delay: .2s;
-}
 .about-paragraphs :nth-child(2),
 .img-aside  {
-    transition-delay: .4s;
+    transition-delay: .2s;
 }
 .about-paragraphs :nth-child(3) {
-    transition-delay: .6s;
+    transition-delay: .4s;
 }
 .about-paragraphs :nth-child(4) {
-    transition-delay: .8s;
+    transition-delay: .6s;
 }
 .btn-cv, .link-aside {
-    transition-delay: 1s;
+    transition-delay: .8s;
 }
 
 .about-college-item:nth-child(1) span,

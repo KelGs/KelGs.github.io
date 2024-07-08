@@ -1,10 +1,22 @@
 import initializePageScripts from "../../utils/initialize-page-scripts.js";
+import { loading } from "../elements/element-html.js";
 
 export default class InitializeNavigation {
   constructor() {
     this.handleNavigationClick = this.handleNavigationClick.bind(this);
     this.handlePopState = this.handlePopState.bind(this);
     this.applyEventListeners();
+    this.loadingContent = loading();
+  }
+
+  showLoading() {
+    document.body.appendChild(this.loadingContent);
+    document.body.classList.add('loading');
+  }
+
+  hideLoading() {
+    document.body.classList.remove('loading');
+    document.body.removeChild(this.loadingContent);
   }
 
   async handleNavigationClick(event) {
@@ -18,17 +30,19 @@ export default class InitializeNavigation {
   }
 
   async loadPage(url) {
-
     try {
+      this.showLoading();
+      console.log('oi')
       const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+      if (!response.ok) throw new Error('Problema na resposta da rede');
+      
       const pageContent = await response.text();
       this.updateContent(pageContent);
       initializePageScripts();
     } catch (error) {
-      console.error('Failed to fetch page:', error);
+      console.error('Falha ao buscar a página:', error);
+    } finally {
+      this.hideLoading();
     }
   }
 

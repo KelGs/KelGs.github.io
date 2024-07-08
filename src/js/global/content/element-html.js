@@ -140,16 +140,3 @@ export const imageFullContent = (href) => {
   </div>
 `;
 };
-
-export const FacultyContent = (date, href, faculty, university) => {
-  return `
-  <li class="about-college-item">
-      <span class="hidden" data-anime="right">${date}</span>
-      <a class="hidden" data-anime="right" href="${href}" target="_blank" rel="noopener noreferer">
-      ${faculty}
-      <img src="./src/assets/svg/external-link.svg" alt="Icon link">
-      </a>
-      <p class="hidden" data-anime="right">${university}</p>
-  </li>
-`;
-};

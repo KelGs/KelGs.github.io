@@ -6,7 +6,6 @@ import CalculateAboutYear from "../pages/about/age-count.js";
 import CopyEmail from "../pages/contact/copy-email.js";
 import ShowHiddenText from "../pages/skill/handle-tab-acessibility.js";
 import ImageFull from "../pages/project/image-full.js";
-import UpdateFaculty from "../pages/about/update-faculty.js";
 import UpdateContent from "../pages/skill/update-content.js";
 
 const pageScripts = {
@@ -24,9 +23,6 @@ const pageScripts = {
 
         const imageFull = new ImageFull('.img-aside', '#about');
         imageFull.init();
-
-        const updateFaculty = new UpdateFaculty('.about-college-list');
-        updateFaculty.init();
     },
     '/skill.html': () => {
         const updateContent = new UpdateContent('.svg-list');

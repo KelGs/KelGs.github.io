@@ -25,13 +25,13 @@
           </h1>
 
           <div class="about-paragraphs">
-            <p class="paragraph hidden " data-anime="left">
+            <p class="paragraph hidden " data-anime="bottom">
               Olá, meu nome é Kelvyn Gonçalves, tenho <span id="year"></span> anos de idade e sou desenvolvedor web front-end. Sou formado em Gestão da Tecnologia da Informação e possuo Pós-Graduação em Desenvolvimento Web Front-end.
             </p>
-            <p class="paragraph hidden" data-anime="left">
+            <p class="paragraph hidden" data-anime="bottom">
               Meu interesse pela programação começou no final do terceiro semestre da minha graduação, quando desenvolvi um aplicativo em C++ para uma loja de PetShop. Essa experiência despertou meu entusiasmo pela programação, levando-me a focar meus estudos no desenvolvimento front-end.
             </p>
-            <p class="paragraph hidden" data-anime="left">
+            <p class="paragraph hidden" data-anime="bottom">
               Em meus projetos, utilizo <span>HTML5</span>, <span>CSS3 (com Sass)</span> e <span>Javascript</span>, aplicando também conceitos de <span>UI/UX Design</span> para criar e desenvolver interfaces intuitivas e agradáveis. Atualmente, estou expandindo meus conhecimentos em <span>React</span> e <span>TypeScript</span>.
             </p>
           </div>
@@ -45,7 +45,7 @@
         </article>
 
         <aside class="about-aside">
-          <img src="/src/assets/images/me.webp" class="hidden img-aside" alt="Rosto do Kelvyn Gonçalves" data-anime="right" width="400" height="540">
+          <img src="/src/assets/images/me.webp" loading="lazy" class="hidden img-aside" alt="Rosto do Kelvyn Gonçalves" data-anime="right" width="400" height="540">
           <a class="link link-aside hidden" data-anime="left" href="https://maps.app.goo.gl/mASeMHDfzW7StaUb7" target="_blank" rel="noopener noreferer" aria-label="Localização: Planaltina de Goiás, Brasil">
             Planaltina de Goiás, Brasil
             <img src="./src/assets/svg/location.svg" width="20" height="20" alt="Icon link">
@@ -57,7 +57,32 @@
       <section class="about-trainer">
         <article id="about-college">
           <div class="about-college-bar"></div>
-          <ul class="about-college-list"></ul>
+          <ul class="about-college-list">
+            <li class="about-college-item">
+              <span class="hidden" data-anime="right">Dezembro de 2021.</span>
+              <a class="hidden" data-anime="right" href="https://drive.google.com/file/d/16DxN7ur3m4J8kzOtcHs2BTYQA20LYQQo/view?usp=sharing" target="_blank" rel="noopener noreferer">Tecnólogo em Gestão da Tecnologia da Informação
+                <img src="./src/assets/svg/external-link.svg" alt="Icon link">
+              </a>
+              <p class="hidden" data-anime="right">Universidade Paulista - UNIP</p>
+            </li>
+
+            <li class="about-college-item">
+              <span class="hidden" data-anime="right">Dezembro de 2023.</span>
+              <a class="hidden" data-anime="right" href="https://drive.google.com/file/d/1cyYTQxpJYOCCpCw0LiQZNOVYXKSmdxxx/view?usp=sharing" target="_blank" rel="noopener noreferer">Pós Graduação em Desenvolvimento Web Full Stack
+                <img src="./src/assets/svg/external-link.svg" alt="Icon link">
+              </a>
+              <p class="hidden" data-anime="right">Universidade Anhanguera</p>
+            </li>
+
+            <li class="about-college-item">
+              <span class="hidden" data-anime="right">Junho de 2024.</span>
+              <a class="hidden" data-anime="right" href="https://drive.google.com/file/d/1Voyhjwa_rieVGQ477Hbs7zlC8THZgHAG/view?usp=sharing" target="_blank" rel="noopener noreferer">Pós Graduação em Desenvolvimento Front-end
+                <img src="./src/assets/svg/external-link.svg" alt="Icon link">
+              </a>
+              <p class="hidden" data-anime="right">Universidade Unopar</p>
+            </li>
+
+          </ul>
         </article>
 
         <article class="about-courses">
@@ -113,6 +138,7 @@
   </noscript>
 
   <script src="./main.js" type="module"></script>
+
 </body>
 
 </html>

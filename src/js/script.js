@@ -3,12 +3,15 @@ import { initializeNavigation } from './utils/initialize-navigation.js';
 import initializePageScripts from './utils/initialize-page-scripts.js';
 import { initializeDelayedEvents } from './utils/initialize-delayed-events.js';
 
-function initializeComponentsAsync() {
+
+async function initializeComponentsAsync() {
     return new Promise((resolve, reject) => {
         try {
             initializeComponents();
             initializeNavigation();
-            resolve();
+            setTimeout(() => {
+                resolve(); 
+            }, 600);
         } catch (error) {
             reject(new Error(error));
         }
@@ -20,7 +23,9 @@ async function resolveInitialization() {
         await initializeComponentsAsync();
         initializePageScripts();
 
-        setTimeout(() => initializeDelayedEvents(), 600);
+        setTimeout(() => {
+            initializeDelayedEvents();
+        }, 1000);
     } catch (error) {
         console.error('Erro durante a inicialização:', error);
     }

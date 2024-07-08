@@ -21,6 +21,7 @@ export default class ActivateNavigationLinks {
       }
   
       link.addEventListener('click', (event) => {
+        event.preventDefault()
         this.activateLink(event.target);
       });
     });
