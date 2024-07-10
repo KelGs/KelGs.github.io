@@ -46,7 +46,7 @@ export const LiProject = (
     <li class="project hidden" data-anime="${dataAnime}">
       <section class="project-main">
         <picture class="project-image">
-          <img src="${image}" alt="${title}">
+          <img src="${image}" loading="lazy" alt="${title}">
         </picture>
 
         <aside class="project-aside">
@@ -98,7 +98,7 @@ export const LiProjectPresentation = (
   <li class="project project-presentation hidden" data-anime="${dataAnime}">
     <section class="project-main">
       <picture class="project-image">
-        <img class="image-project" src="${image}" alt="${alt}">
+        <img class="image-project" loading="lazy" src="${image}" alt="${alt}">
       </picture>
 
       <aside class="project-aside">
@@ -140,3 +140,15 @@ export const imageFullContent = (href) => {
   </div>
 `;
 };
+
+export const loading = () => {
+  let div = document.createElement("div");
+  div.id = 'loading';
+
+  let img = document.createElement("img");
+  img.src = './src/assets/svg/loading.svg';
+
+  div.appendChild(img);
+
+  return div;
+}

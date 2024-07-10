@@ -14,7 +14,7 @@
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
-  background-color: $background;
+  background-color: var(--background);
 }
 
 ul, a {
@@ -42,6 +42,6 @@ ul {
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: $secundary;
+  background-color: $secondary;
   border-radius: 10px;
 }

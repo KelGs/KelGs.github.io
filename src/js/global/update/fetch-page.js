@@ -1,5 +1,5 @@
 import initializePageScripts from "../../utils/initialize-page-scripts.js";
-import { loading } from "../elements/element-html.js";
+import { loading } from "../content/element-html.js";
 
 export default class InitializeNavigation {
   constructor() {
@@ -32,7 +32,6 @@ export default class InitializeNavigation {
   async loadPage(url) {
     try {
       this.showLoading();
-      console.log('oi')
       const response = await fetch(url);
       if (!response.ok) throw new Error('Problema na resposta da rede');
       

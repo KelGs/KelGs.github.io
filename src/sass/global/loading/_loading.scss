@@ -1,26 +1,17 @@
-#loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    display: none;
-    place-content: center;
-    z-index: 10;
-    background: #0f0f0f40;
-    backdrop-filter: blur( .5rem );
-    -webkit-backdrop-filter: blur( .5rem );
+#pre-loader, #loading {
+    @include loader;
     img {
         width: 80px;
         animation: spinner linear 1s infinite;
     }
-}
+  }
+  #pre-loader.hidden {
+    display: none;
+  }
+
 
 body.loading {
     overflow: hidden;
-    #loading {
-        display: grid;
-    }
 }
 
 @keyframes spinner {
@@ -28,4 +19,3 @@ body.loading {
         transform: rotate(360deg);
     }
 }
-

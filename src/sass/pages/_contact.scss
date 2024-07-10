@@ -26,7 +26,7 @@
     border: 1px solid $border;
     flex: 1 0 25rem;
     border-radius: 1rem;
-    color: $secundary;
+    color: $secondary;
     height: 25rem;
     margin: 2rem 0;
     @media (max-width: 400px) {
@@ -34,7 +34,7 @@
       min-height: 20rem;
     }
     .contact_svg {
-      fill: $secundary;
+      fill: $secondary;
       path {
         transition: .2s all ease-in-out;
       }

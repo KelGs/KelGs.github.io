@@ -8,7 +8,7 @@
 }
 
 .container {
-    display: grid;
+    display: none;
     grid-template-rows: 8vh 1fr 8vh;
     margin: 0 auto;
     min-height: 100vh;
@@ -26,7 +26,7 @@
 }
 
 .paragraph {
-    color: $secundary;
+    color: $secondary;
     font-size: clamp(1.6rem, 1.8rem, 3vw);
     line-height: 1.6;
     max-width: 50ch;
@@ -47,7 +47,7 @@
 }
 
 .svg {
-    fill: $secundary;
+    fill: $secondary;
     cursor: pointer;
 
     &:hover {

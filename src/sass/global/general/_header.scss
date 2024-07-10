@@ -1,7 +1,7 @@
 .header {
   @include flexItem(space-between, center, row, 2rem);
   padding: 1rem 3vw;
-  color: $secundary;
+  color: $secondary;
   &.active {
     .social-content {
       @include flexItem(center, center, column, 3rem);
@@ -68,7 +68,7 @@
           &::after, &::before {
             top: 0;
             opacity: 1;
-            background-color: $secundary;
+            background-color: $secondary;
           }
           &::after {
             transform: rotate(225deg);
@@ -108,7 +108,7 @@
 
   &:hover {
     color: $contrast-text;
-    background-color: #1b1b1b;
+    background-color: $hover
   }
 
   &.active {
@@ -138,15 +138,15 @@
     display: block;
     width: 2.5rem;
     height: .3rem;
-    background-color: $secundary;
+    background-color: $secondary;
 
     &::after {
-      @include pseudoClass(2.5rem, .3rem, .8rem, auto, $secundary);
+      @include pseudoClass(2.5rem, .3rem, .8rem, auto, $secondary);
       transition: .5s ease-in-out;
     }
 
     &::before {
-      @include pseudoClass(2.5rem, .3rem, -.8rem, auto, $secundary);
+      @include pseudoClass(2.5rem, .3rem, -.8rem, auto, $secondary);
       transition: .5s ease-in-out;
     }
   }
