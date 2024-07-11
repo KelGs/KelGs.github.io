@@ -112,6 +112,9 @@
   ::-webkit-scrollbar {
     width: .5rem;
   }
+  .skill-svg[title="Code"] {
+    order: -1;
+  }
   .skill-text {
     .skill-text-span:nth-child(3) {
       animation-delay: 0.2s;
@@ -126,7 +129,7 @@
   
   .skill-list {
     min-height: 35vh;
-    &.active {
+    &.show-text {
       height: max-content;
       .skill-text {
         .btn-show {

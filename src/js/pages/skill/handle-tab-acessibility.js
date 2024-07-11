@@ -4,21 +4,21 @@ export default class ShowHiddenText {
         this.mobileBreakpoint = 500;
     }
 
-    toggleUlContent(ev) {
-        const element = ev.target;
-        element.classList.contains('btn-show') && this.ulContent.classList.add('active');
-        element.classList.contains('btn-hide') && this.ulContent.classList.remove('active');
-    }
+    toggleUlContent({target}) {
+        const toggleClasses = ['btn-show', 'btn-hide'];
 
-    checkEvent(ev) {
-        if(ev.key === "Enter") {
-            this.toggleUlContent(ev);
+        if (toggleClasses.some(cls => target.classList.contains(cls))) {
+            this.ulContent.classList.toggle('show-text');
         }
     }
 
     handleClick() {
         window.addEventListener('click', (ev) => this.toggleUlContent(ev))
-        window.addEventListener('keyup', (ev) => this.checkEvent(ev))
+        window.addEventListener('keyup', (ev) => {
+            if(ev.key === "Enter") {
+                this.toggleUlContent(ev);
+            }
+        })
     }
 
     init() {

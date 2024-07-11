@@ -20,7 +20,7 @@ export default class HandleTabNavigation {
         this.listSvg.forEach((svg, svgIndex) => {
             svg.classList.toggle(this.activeClass, svgIndex === index);
         });
-        this.ulContent.classList.remove(this.activeClass);
+        this.ulContent.classList.remove('show-text');
     }
 
     handleSvg(el, index) {

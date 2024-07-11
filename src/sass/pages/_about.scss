@@ -91,7 +91,7 @@
 
 .about-college-bar {
   min-width: .8rem;
-  background-color: $secondary;
+  background-color: $primary;
   min-height: 45rem;
   border-radius: 1rem;
 }
@@ -140,7 +140,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-color: $secondary;
+    background-color: $primary;
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;

@@ -1,43 +1,33 @@
 import { ModalElement } from "../../global/content/element-html.js";
 
 export default class ToggleModal {
-    constructor(modalSelector) {
-        this.modalElement = document.querySelector(modalSelector);
-        this.currentPath = window.location.pathname;
-        this.handleClick = this.handleClick.bind(this);
-        this.handleKeyup = this.handleKeyup.bind(this);
+    constructor(contentModal, btnModal) {
+        this.modalElement = document.querySelector(contentModal);
+        this.btnModal = document.querySelector(btnModal)
+        this.addModalContent = this.addModalContent.bind(this);
+        this.removeModalContent = this.removeModalContent.bind(this);
+
     }
 
-    toggleModalContent() {
-        this.modalElement.classList.toggle('active');
-
-        if (this.modalElement.classList.contains('active')) {
-            this.modalElement.insertAdjacentHTML('beforeend', ModalElement());
-        } else if (this.modalElement.lastElementChild) {
-            this.modalElement.lastElementChild.remove();
-        }
+    removeModalContent() {
+        this.modalElement.lastElementChild.remove();
     }
 
-    handleClick(event) {
-        if (event.target.classList.contains('modal-close') || event.target.classList.contains('title-alert')) {
-            this.toggleModalContent();
-        }
-    }
+    addModalContent() {
+        this.modalElement.insertBefore(ModalElement(), this.nextSibling);
 
-    handleKeyup(event) {
-        if (event.key === "Enter" && (event.target.classList.contains('modal-close') || event.target.classList.contains('title-alert'))) {
-            this.toggleModalContent();
-        }
-    }
+        const btnClose = this.modalElement.querySelector('.modal-close');
 
-    addEventListeners() {
-        if (["/", "/index.html"].includes(this.currentPath)) {
-            window.addEventListener('click', this.handleClick);
-            window.addEventListener('keyup', this.handleKeyup);
-        }
+        btnClose.addEventListener('click', this.removeModalContent);
+        btnClose.addEventListener('keyup', ({key}) => key === 'Enter' && this.removeModalContent())
     }
 
     init() {
-        this.addEventListeners();
+        this.btnModal.addEventListener('click', this.addModalContent);
+
+        this.btnModal.addEventListener('keyup', (ev) => {
+            ev.key === 'Enter' && this.addModalContent();
+        });
+
     }
 }

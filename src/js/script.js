@@ -8,10 +8,9 @@ async function resolveInitialization() {
   try {
     initialLoading();
     await initializeComponents(); 
+    initializeNavigation();
 
     await new Promise(resolve => setTimeout(resolve, 500));
-
-    initializeNavigation();
     initializePageScripts();
     initializeDelayedEvents();
   } catch (error) {

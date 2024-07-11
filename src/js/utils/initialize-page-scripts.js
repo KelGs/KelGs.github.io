@@ -10,11 +10,11 @@ import UpdateContent from "../pages/skill/update-content.js";
 
 const pageScripts = {
     '/index.html': () => {
-        const toggleModal = new ToggleModal('#main');
+        const toggleModal = new ToggleModal('.main-content', '.title-alert');
         toggleModal.init();
     },
     '/': () => {
-        const toggleModal = new ToggleModal('#main');
+        const toggleModal = new ToggleModal('.main-content', '.title-alert');
         toggleModal.init();
     },
     '/about.html': () => {

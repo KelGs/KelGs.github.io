@@ -19,9 +19,9 @@ export default class InitializeNavigation {
     document.body.removeChild(this.loadingContent);
   }
 
-  async handleNavigationClick(event) {
-    event.preventDefault();
-    const targetUrl = event.target.href;
+  async handleNavigationClick(link) {
+    link.preventDefault();
+    const targetUrl = link.target.href;
 
     if (window.location.href !== targetUrl) {
       window.history.pushState(null, null, targetUrl);
@@ -69,11 +69,10 @@ export default class InitializeNavigation {
   applyEventListeners() {
     window.addEventListener('popstate', this.handlePopState);
 
-    document.addEventListener('click', (event) => {
-      if (event.target.classList.contains('nav-link')) {
-        this.handleNavigationClick(event);
-      }
-    });
+    const allLink = document.querySelectorAll('.nav-link');
+    allLink.forEach((link) => {
+      link.addEventListener('click', this.handleNavigationClick)
+    })
   }
 
   init() {

@@ -1,7 +1,8 @@
 export const ModalElement = () => {
-  const modalElement = `
-    <div id="modal">
-    <section id="modal-content">
+  const div = document.createElement('div');
+  div.id = 'modal';
+  div.innerHTML = `
+  <section id="modal-content">
       <header class="modal-content-header">
         <h2>Olá,</h2>
 
@@ -20,9 +21,8 @@ export const ModalElement = () => {
         <p><span>Javascript:</span> Empregado para adicionar interatividade dinâmica ao site, proporcionando funcionalidades avançadas e uma experiência mais envolvente para o usuário. Todo o código Javascript foi otimizado para garantir a máxima eficiência e desempenho.</p>
       </div>
     </section>
-  </div>
-    `;
-  return modalElement;
+    `
+  return div;
 };
 
 export const LiContent = (title, content) => {
@@ -46,7 +46,7 @@ export const LiProject = (
     <li class="project hidden" data-anime="${dataAnime}">
       <section class="project-main">
         <picture class="project-image">
-          <img src="${image}" loading="lazy" alt="${title}">
+          <img class="image-project" loading="lazy" width="570" height="300"  src="${image}" alt="${title}">
         </picture>
 
         <aside class="project-aside">
@@ -131,14 +131,15 @@ export const showModalEmail = () => {
 };
 
 export const imageFullContent = (href) => {
-  return `
-  <div id="fade-image-project">
-    <div class="fade-image-content">
-      <svg  aria-label="Fechar modal"  tabindex="0" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x modal-close"><circle class="modal-close" cx="12" cy="12" r="10"/><path class="modal-close" d="m15 9-6 6"/><path class="modal-close" d="m9 9 6 6"/></svg>
-      <img src="${href}" alt="">
-    </div>
+  const div = document.createElement('div');
+  div.id = 'fade-image-project';
+  div.innerHTML = `
+  <div class="fade-image-content">
+    <svg  aria-label="Fechar modal"  tabindex="0" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x modal-close"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+    <img src="${href}" alt="">
   </div>
-`;
+  `
+  return div;
 };
 
 export const loading = () => {

@@ -6,37 +6,25 @@ export default class ImageFull {
     this.content = document.querySelector(content);
   }
 
-  eventImage() {
-    this.image.forEach((img) => {
-      img.addEventListener('click', () => {
-        this.updateImage(img)
-      })
-    });
-  }
-
   updateImage(img) {
-    this.content.classList.add('active');
     document.body.style.overflow = 'hidden';
-    if(this.content.classList.contains('active')) {
-      this.content.insertAdjacentHTML('beforeend', imageFullContent(img.src));
-    }
+    this.content.appendChild(imageFullContent(img.src));
+    this.removeImage();
   }
 
   removeImage() {
-    window.addEventListener('click', (el) => {
-      if(el.target.classList.contains('modal-close')){
-        if(this.content.lastElementChild.id === 'fade-image-project') {
-          this.content.lastElementChild.remove();
-        }
-
-        this.content.classList.remove('active')
-        document.body.style.overflow = '';
-      }
-    })
+    document.querySelector('.modal-close').
+    addEventListener('click', () => {
+      this.content.lastElementChild.remove();
+      document.body.style.overflow = '';
+    });
   }
 
   init() {
-    this.eventImage();
-    this.removeImage();
+    this.image.forEach((img) => {
+      img.addEventListener('click', () => this.updateImage(img))
+
+      img.addEventListener('keyup', ({key}) => key === 'Enter' && this.updateImage(img))
+    } );
   }
 }

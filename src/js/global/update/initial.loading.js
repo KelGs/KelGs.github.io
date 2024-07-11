@@ -1,6 +1,9 @@
 export default function initialLoading () {
-    window.addEventListener('load', () => {
+    function removeLoading() {
         document.querySelector('.container').style.display = 'grid';
         document.querySelector('#pre-loader').remove();
-    })
+        window.removeEventListener('load', removeLoading);
+    }
+
+    window.addEventListener('load', removeLoading);
 }
