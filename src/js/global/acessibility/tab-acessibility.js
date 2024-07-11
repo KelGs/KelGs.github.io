@@ -2,7 +2,7 @@ export default class EnableAccessibilityFeatures {
     elementFocus(el) {
         const elementFocus = el.target;
         if(elementFocus) {
-            elementFocus.style.outline = "2px solid #a83dff"
+            elementFocus.style.outline = "2px solid var(--contrast)"
             elementFocus.style.transition = ".2s all linear"
         }
     

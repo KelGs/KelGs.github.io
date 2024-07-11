@@ -1,20 +1,17 @@
 export default class LoadComponent {
-  constructor(url, selector) {
+    constructor(url, selector) {
       this.url = url;
       this.selector = selector;
-  }
-
-  async init() {
+    }
+  
+    async init() {
       try {
-          const response = await fetch(this.url);
-          if (response.ok) {
-              const content = await response.text();
-              document.querySelector(this.selector).innerHTML = content;
-          } else {
-              throw new Error(`Falha ao carregar ${this.url}: ${response.statusText}`);
-          }
+        const response = await fetch(this.url);
+        const html = await response.text();
+        document.querySelector(this.selector).innerHTML = html;
       } catch (error) {
-          console.error(`Erro ao carregar ${this.url}:`, error);
+        console.error(`Failed to load component ${this.selector}:`, error);
       }
+    }
   }
-}
+  

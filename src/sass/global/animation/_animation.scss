@@ -1,14 +1,14 @@
 .hidden {
     opacity: 0;
     filter: blur(.5rem);
-    transition: 1.5s ease-in-out;
+    transition: 1.5s all ease-in-out;
     transition-property: transform, opacity, filter;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transition: 1.5s ease-in-out;
+    transition: 1.5s all ease-in-out;
     transition-property: transform, opacity, filter;
 }
 
@@ -51,6 +51,10 @@
 
 [data-anime] {
     transition-delay: var(--delay);
+}
+
+.list-project li:nth-child(2) {
+    transition-delay: .2s;
 }
 
 @media (max-width: 1000px) {

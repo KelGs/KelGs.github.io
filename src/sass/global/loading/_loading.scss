@@ -1,7 +1,7 @@
 #pre-loader, #loading {
     @include loader;
-    img {
-        width: 80px;
+    svg {
+        color: $contrast;
         animation: spinner linear 1s infinite;
     }
   }

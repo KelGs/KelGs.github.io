@@ -48,7 +48,7 @@
   grid-template-columns: repeat(3, max-content);
   padding: clamp(3rem, 5vw, 5rem) clamp(2rem, 5vw, 4rem);
   gap: clamp(.5rem, 2vw, 3rem);
-  @include boxShadow(3px, -3px, 7px);
+  @include boxShadow(3px, -3px, 12px);
   border-radius: 1rem;
 }
 
@@ -64,7 +64,7 @@
   cursor: pointer;
 
   &.active {
-    @include insetBoxShadow(3px, -3px, 7px);
+    @include insetBoxShadow(3px, -3px, 8px);
     border-color: transparent;
     .svg-skill {
       transform: scale(.9);

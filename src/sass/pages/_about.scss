@@ -12,9 +12,9 @@
       color: $contrast-text;
     }
 }
-  
+
 .btn-cv {
-  @include boxShadow(3px, -3px, 7px);
+  @include boxShadow(3px, -3px, 10px);
   color: $contrast-text;
   border-radius: .5rem;
   padding: 1rem 2rem;
@@ -68,7 +68,7 @@
 
 .about-arrow {
   position: absolute;
-  color: $primary;
+  color: $contrast;
   bottom: -10vh;
   right: 0;
   animation: upDown 2s infinite;
@@ -118,7 +118,7 @@
   }
   a {
     color: $primary;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .15rem;
     font-size: clamp(1.6rem, 2vw, 1.9rem);
     text-decoration: underline;
@@ -166,7 +166,7 @@
     font-weight: 400;
     min-width: 28rem;
     max-width: 100%;
-    color: $contrast;
+    color: #e4e4e4;
     padding: 2rem;
     flex: 1 0 28rem;
     height: 25rem;

@@ -153,7 +153,7 @@
 }
 
 .social-content {
-  @include boxShadow(3px, -3px, 7px);
+  @include boxShadow(6px, -6px, 17px);
   right: calc(3vw - 1rem);
   background-color: $background;
   pointer-events: none;
@@ -163,4 +163,10 @@
   padding: 3rem 1rem;
   opacity: 0;
   z-index: 2;
+  svg {
+    color: $secondary;
+    &:hover {
+      color: $contrast;
+    }
+  }
 }
